@@ -27,5 +27,18 @@ namespace WcfServiceLibrary1
             }
             return composite;
         }
+
+        public MyClass GetMyClass(string value)
+        {
+            MyClass exmpMyClass = new MyClass();
+            exmpMyClass.StringToArray(value);
+            return exmpMyClass;
+        }
+
+        public int[] MyFunction(string value)
+        {
+            MyClass exmpMyClass = new MyClass();
+            return exmpMyClass.StringToArray(value);
+        }
     }
 }

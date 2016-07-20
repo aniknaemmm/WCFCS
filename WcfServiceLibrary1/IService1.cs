@@ -15,6 +15,12 @@ namespace WcfServiceLibrary1
         string GetData(int value);
 
         [OperationContract]
+        int[] MyFunction(string value);
+
+        [OperationContract]
+        MyClass GetMyClass(string value);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
