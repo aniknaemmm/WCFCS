@@ -15,6 +15,10 @@ namespace Wcf.Client
         {
             [OperationContract]
             string GetCommandString(int i);
+
+            [OperationContract]
+            MyClass GetMyClass(string value);
+
         }
 
         class Program
@@ -32,6 +36,10 @@ namespace Wcf.Client
                 Console.WriteLine(service.GetData(20));
                 Console.WriteLine(service.GetData(1562492));
                 Console.WriteLine(service.GetData(0));
+                var ttrt = service.GetMyClass("dsdsdedfd");
+                Console.WriteLine("myclass f" + ttrt.firstValue);
+                Console.WriteLine("myclass s" + ttrt.secondValue);
+
                 Console.ReadLine();
             }
         }
